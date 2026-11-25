@@ -1,9 +1,9 @@
 'use strict';
 
-var through = require('through2');
-var normalizePath = require('normalize-path');
+const path = require('node:path');
+const { objectTransform } = require('through2');
 
-var generate = require('./lib/generate');
+const generate = require('./lib/generate');
 
 function identityMap() {
 
@@ -12,8 +12,8 @@ function identityMap() {
       return cb(null, file);
     }
 
-    var sourcePath = normalizePath(file.relative);
-    var contents = file.contents.toString();
+    const sourcePath = file.relative.split(path.sep).join('/');
+    const contents = file.contents.toString();
 
     switch (file.extname) {
       case '.js': {
@@ -29,7 +29,7 @@ function identityMap() {
     cb(null, file);
   }
 
-  return through.obj(transform);
+  return objectTransform(transform);
 }
 
 module.exports = identityMap;

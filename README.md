@@ -1,23 +1,19 @@
-# @gulp-sourcemaps/identity-map
+# @recranet/gulp-sourcemaps-identity-map
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![AppVeyor Build Status][appveyor-image]][appveyor-url] [![Coveralls Status][coveralls-image]][coveralls-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][ci-image]][ci-url]
 
 Gulp plugin for generating an identity sourcemap for a file.
 
-## Strict No LLM / No AI Policy
+Modernized fork of [`@gulp-sourcemaps/identity-map`](https://github.com/gulp-sourcemaps/identity-map). The public API is unchanged.
 
-No LLMs for issues.
+## Requirements
 
-No LLMs for patches / pull requests.
-
-No LLMs for comments on the bug tracker, including translation.
-
-English is encouraged, but not required. You are welcome to post in your native language and rely on others to have their own translation tools of choice to interpret your words.
+* Node.js 22.12 or newer.
 
 ## Example
 
 ```js
-var identityMap = require('@gulp-sourcemaps/identity-map');
+var identityMap = require('@recranet/gulp-sourcemaps-identity-map');
 
 gulp.src(...)
   .pipe(sourcemaps.init())
@@ -36,15 +32,9 @@ Returns an `objectMode` Transform stream that processes each file with a `.sourc
 
 MIT
 
-[downloads-image]: http://img.shields.io/npm/dm/@gulp-sourcemaps/identity-map.svg
-[npm-url]: https://npmjs.org/package/@gulp-sourcemaps/identity-map
-[npm-image]: http://img.shields.io/npm/v/@gulp-sourcemaps/identity-map.svg
+[downloads-image]: https://img.shields.io/npm/dm/@recranet/gulp-sourcemaps-identity-map.svg
+[npm-url]: https://www.npmjs.com/package/@recranet/gulp-sourcemaps-identity-map
+[npm-image]: https://img.shields.io/npm/v/@recranet/gulp-sourcemaps-identity-map.svg
 
-[travis-url]: https://travis-ci.org/gulp-sourcemaps/identity-map
-[travis-image]: http://img.shields.io/travis/gulp-sourcemaps/identity-map.svg?label=travis-ci
-
-[appveyor-url]: https://ci.appveyor.com/project/phated/identity-map
-[appveyor-image]: https://img.shields.io/appveyor/ci/phated/identity-map.svg?label=appveyor
-
-[coveralls-url]: https://coveralls.io/r/gulp-sourcemaps/identity-map
-[coveralls-image]: http://img.shields.io/coveralls/gulp-sourcemaps/identity-map.svg
+[ci-url]: https://github.com/recranet/gulp-sourcemaps-identity-map/actions/workflows/ci.yml
+[ci-image]: https://img.shields.io/github/actions/workflow/status/recranet/gulp-sourcemaps-identity-map/ci.yml?style=flat-square
